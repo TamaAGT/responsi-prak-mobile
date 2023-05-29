@@ -64,7 +64,11 @@ Widget _buildSuccessSection(ListNewsModel data) {
 
 Widget _buildItemUsers(Posts userData) {
   return InkWell(
-    onTap: () {},
+    onTap: () {
+      Navigator.push(context, MaterialPageRoute(builder: (context) {
+        return DetailNews();
+      }));
+    },
     child: Card(
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
